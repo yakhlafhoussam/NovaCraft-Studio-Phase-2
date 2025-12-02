@@ -554,6 +554,10 @@ video {
   display: none;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -572,6 +576,22 @@ video {
 
 .mb-2 {
   margin-bottom: 0.5rem;
+}
+
+.mt-\[\] {
+  margin-top: ;
+}
+
+.mt-\[10\%\] {
+  margin-top: 10%;
+}
+
+.mb-\[\] {
+  margin-bottom: ;
+}
+
+.mb-\[10\%\] {
+  margin-bottom: 10%;
 }
 
 .flex {
@@ -850,6 +870,10 @@ video {
 
 .opacity-0 {
   opacity: 0;
+}
+
+.opacity-50 {
+  opacity: 0.5;
 }
 
 .shadow-md {
