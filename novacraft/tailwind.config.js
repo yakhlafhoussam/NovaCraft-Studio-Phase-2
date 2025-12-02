@@ -4,7 +4,11 @@ export default {
     "./public/index.php"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        inter: ['Hanken Grotesk', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
