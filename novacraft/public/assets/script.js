@@ -7,6 +7,8 @@ let emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
 if (pageselect == "home") {
     document.querySelector("#home").classList.add("border-b-2")
     document.querySelector("#home").classList.remove("hover:scale-105")
+    document.querySelector("#hyk").classList.remove("min-h-[80%]" , "py-10" , "bg-[#EFF0F0]")
+    document.querySelector("#hyk").classList.add("h-[80%]")
     console.log(pageselect);
     document.addEventListener("DOMContentLoaded", event => {
         gsap.from(".sun", {
@@ -24,10 +26,14 @@ if (pageselect == "home") {
 } else if (pageselect == "services") {
     document.querySelector("#services").classList.add("border-b-2")
     document.querySelector("#services").classList.remove("hover:scale-105")
+    document.querySelector("#hyk").classList.add("min-h-[80%]" , "py-10" , "bg-[#EFF0F0]")
+    document.querySelector("#hyk").classList.remove("h-[80%]")
     console.log(pageselect);
 } else if (pageselect == "about") {
     document.querySelector("#about").classList.add("border-b-2")
     document.querySelector("#about").classList.remove("hover:scale-105")
+    document.querySelector("#hyk").classList.remove("min-h-[80%]" , "py-10" , "bg-[#EFF0F0]")
+    document.querySelector("#hyk").classList.add("h-[80%]")
     console.log(pageselect);
 } else if (pageselect == "contact") {
     user = document.querySelector("#name");
@@ -35,6 +41,8 @@ if (pageselect == "home") {
     msg = document.querySelector("#msg");
     document.querySelector("#contact").classList.add("border-b-2")
     document.querySelector("#contact").classList.remove("hover:scale-105")
+    document.querySelector("#hyk").classList.remove("min-h-[80%]" , "py-10" , "bg-[#EFF0F0]")
+    document.querySelector("#hyk").classList.add("h-[80%]")
     console.log(pageselect);
     document.querySelector("#send").onclick = function () {
         if (user.value == "" || email.value == "" || !emailRegex.test(email.value) || msg.value == "") {

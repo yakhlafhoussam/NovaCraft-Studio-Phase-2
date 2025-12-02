@@ -10,5 +10,42 @@
     {
         "title": "Automation & APIs",
         "description": "Task automation, API integration."
-    }
+    },
+    {
+    "title": "UI/UX Design",
+    "description": "Modern interfaces, user-centered experiences."
+},
+{
+    "title": "Brand Identity",
+    "description": "Logos, visual guidelines, complete branding."
+},
+{
+    "title": "Mobile App Development",
+    "description": "iOS & Android apps, smooth performance."
+},
+{
+    "title": "SEO Optimization",
+    "description": "Improve visibility, search engine ranking."
+},
+{
+    "title": "Maintenance & Support",
+    "description": "Bug fixes, updates, monitoring."
+},
+{
+    "title": "Hosting & Deployment",
+    "description": "Secure hosting, domain setup, server configuration."
+},
+{
+    "title": "Digital Marketing",
+    "description": "Social media ads, content strategy, campaigns."
+},
+{
+    "title": "Graphic Design",
+    "description": "Banners, posters, social media designs."
+},
+{
+    "title": "Consulting & Strategy",
+    "description": "Technical guidance, project planning."
+}
+
 ]

@@ -15,7 +15,7 @@
     <?php
     include 'header.php';
     ?>
-    <main class="h-[80%]">
+    <main id="hyk" class="flex flex-col justify-center items-center h-[80%] overflow-x-hidden">
         <?php
         include $srcpage;
         ?>

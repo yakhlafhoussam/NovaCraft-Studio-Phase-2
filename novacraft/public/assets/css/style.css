@@ -590,16 +590,28 @@ video {
   height: 10%;
 }
 
-.h-\[80\%\] {
-  height: 80%;
-}
-
 .h-full {
   height: 100%;
 }
 
 .h-screen {
   height: 100vh;
+}
+
+.h-\[80\%\] {
+  height: 80%;
+}
+
+.h-\[\] {
+  height: ;
+}
+
+.h-\[80\] {
+  height: 80;
+}
+
+.min-h-\[80\%\] {
+  min-height: 80%;
 }
 
 .w-1\/2 {
@@ -654,6 +666,10 @@ video {
   gap: 2rem;
 }
 
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
 .rounded-3xl {
   border-radius: 1.5rem;
 }
@@ -672,6 +688,14 @@ video {
 
 .border-8 {
   border-width: 8px;
+}
+
+.border-b {
+  border-bottom-width: 1px;
+}
+
+.border-b-2 {
+  border-bottom-width: 2px;
 }
 
 .border-solid {
@@ -751,6 +775,11 @@ video {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .text-center {
