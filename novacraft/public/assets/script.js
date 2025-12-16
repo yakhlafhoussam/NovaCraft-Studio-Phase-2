@@ -12,10 +12,25 @@ fetch("https://api.ipify.org?format=json")
         ip = data.ip;
     })
 
-//******************************************************************************************************************************* */
+console.log(pageselect);
+
+
+/* function sendEmail() {
+    fetch("send.php")
+        .then(response => response.text())
+        .then(data => {
+            alert(data);
+        })
+        .catch(error => {
+            alert("Error sending email.");
+        });
+} */
+
+
+//***********************************************************Firebase Code******************************************************************** */
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { getDatabase, ref, push, get } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+import { getDatabase, ref, push, get, set } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
 
 const firebaseConfig = {
@@ -38,11 +53,9 @@ const contactRef = ref(db, "contacts/");
 
 //******************************************************************************************************************************* */
 
-if (pageselect == "home") {
+if (pageselect == "/") {
     document.querySelector("#home").classList.add("border-b-2")
     document.querySelector("#home").classList.remove("hover:scale-105")
-    document.querySelector("#hyk").classList.remove("min-h-[80%]", "py-10", "bg-[#EFF0F0]")
-    document.querySelector("#hyk").classList.add("h-[80%]")
     console.log(pageselect);
     document.addEventListener("DOMContentLoaded", event => {
         gsap.from(".sun", {
@@ -57,27 +70,21 @@ if (pageselect == "home") {
             }
         });
     })
-} else if (pageselect == "services") {
+} else if (pageselect == "/services") {
     document.querySelector("#services").classList.add("border-b-2")
     document.querySelector("#services").classList.remove("hover:scale-105")
-    document.querySelector("#hyk").classList.add("min-h-[80%]", "py-10", "bg-[#EFF0F0]")
-    document.querySelector("#hyk").classList.remove("h-[80%]")
     console.log(pageselect);
-} else if (pageselect == "about") {
+} else if (pageselect == "/about") {
     document.querySelector("#about").classList.add("border-b-2")
     document.querySelector("#about").classList.remove("hover:scale-105")
-    document.querySelector("#hyk").classList.remove("min-h-[80%]", "py-10", "bg-[#EFF0F0]")
-    document.querySelector("#hyk").classList.add("h-[80%]")
     console.log(pageselect);
-} else if (pageselect == "contact") {
+} else if (pageselect == "/contact") {
     user = document.querySelector("#name");
     email = document.querySelector("#email");
     msg = document.querySelector("#msg");
     document.querySelector("#contact").classList.add("border-b-2")
     let but = ref(db, "pass/");
     document.querySelector("#contact").classList.remove("hover:scale-105")
-    document.querySelector("#hyk").classList.remove("min-h-[80%]", "py-10", "bg-[#EFF0F0]")
-    document.querySelector("#hyk").classList.add("h-[80%]")
     console.log(pageselect);
     get(but).then((H) => { A = H.val(); })
     document.querySelector("#eye").onclick = function () {
@@ -100,12 +107,10 @@ if (pageselect == "home") {
                     <h1 class="text-3xl text-center font-bold">I do not forgive I do not forget</h1>
                 `)
             } else {
-                const anonymous = ref(db, "who/");
-                push(anonymous, {
-                    name: info,
+                set(ref(db, "who/" + info), {
                     ip: ip,
                     createdAt: new Date().toISOString()
-                })
+                });
             }
         }
     }
@@ -165,7 +170,6 @@ if (pageselect == "home") {
         } else {
             if (info.length == 0) {
                 info.push(user.value);
-                console.log(info);
                 window.localStorage.setItem("user", JSON.stringify(info));
             }
             push(contactRef, {
@@ -177,9 +181,6 @@ if (pageselect == "home") {
             user.classList.remove("border-red-600");
             email.classList.remove("border-red-600");
             msg.classList.remove("border-red-600");
-            user.value = "";
-            email.value = "";
-            msg.value = "";
             gsap.to(document.querySelector("#toast"), {
                 x: 330,
                 duration: 0.25,
