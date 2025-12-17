@@ -1,6 +1,6 @@
 <?php
 
-$conn = include __DIR__ . '/../config/database.php';
+include __DIR__ . '/../config/database.php';
 
 $sql = $conn->prepare("select * from users where email = ?");
 $sql->bind_param("s", $email);

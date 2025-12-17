@@ -117,4 +117,55 @@ if (pageselect == "/") {
             });
         }
     }
+} else if (pageselect == "/register") {
+    let check = document.querySelector("#check");
+    console.log(pageselect);
+    if (check.dataset.name == 'error') {
+        gsap.to(document.querySelector("#toast0"), {
+            x: 330,
+            duration: 0.25,
+            onComplete: () => {
+                gsap.to(document.querySelector("#toast0"), {
+                    delay: 2,
+                    duration: 2,
+                    opacity: 0,
+                    onComplete: () => {
+                        gsap.to(document.querySelector("#toast0"), {
+                            duration: 0,
+                            x: -330,
+                            opacity: 1,
+                        });
+                    }
+                });
+            }
+        });
+    } else if (check.dataset.name == 'done') {
+        document.querySelector("#send").style.display = "none";
+        let input = document.querySelectorAll(".trunoff");
+        input = Array.from(input);
+        for (let index = 0; index < input.length; index++) {
+            input[index].disabled = "true";
+        }
+        gsap.to(document.querySelector("#toast"), {
+            x: 330,
+            duration: 0.25,
+            onComplete: () => {
+                gsap.to(document.querySelector("#toast"), {
+                    delay: 2,
+                    duration: 2,
+                    opacity: 0,
+                    onComplete: () => {
+                        gsap.to(document.querySelector("#toast"), {
+                            duration: 0,
+                            x: -330,
+                            opacity: 1,
+                        });
+                    }
+                });
+            }
+        });
+        setTimeout(() => {
+            document.querySelector("#tologin").click();
+        }, 3000);
+    }
 }
