@@ -32,6 +32,12 @@
                 echo '<h1 class="text-3xl text-red-600 font-bold">' . $errormsg . '</h1>';
             } else {
                 echo '<h1 class="text-3xl text-green-600 font-bold">Account created successfully</h1>';
+                $errormsg = '';
+                $first = '';
+                $last = '';
+                $user = '';
+                $email = '';
+                $password = '';
             }
         }
     }
