@@ -154,5 +154,7 @@ if (pageselect == "/") {
                 });
             }
         });
+    } else if (check.dataset.name == 'done') {
+        document.querySelector("#toprofil").click();
     }
 }

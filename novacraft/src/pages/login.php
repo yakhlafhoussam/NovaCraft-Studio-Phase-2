@@ -1,5 +1,6 @@
 <?php
 $errormsg = '';
+$toast = '';
 $email = '';
 $password = '';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -28,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             }
                             ?>"></div>
 <div class="w-screen h-full bg-[#EFF0F0] flex flex-col justify-center items-center gap-10 relative">
-    <a id="toprofil" href="" class="w-0 h-0"></a>
+    <a id="toprofil" href="profile" class="w-0 h-0"></a>
     <div id="toast0" class="flex gap-2 bg-red-600 text-white px-4 py-3 rounded-lg absolute top-10 -left-80">
         <span class="font-semibold">Error:</span>
         <h1><?php
