@@ -13,7 +13,12 @@ if ($sql->num_rows > 0) {
     $sql->execute();
     $result = $sql->get_result();
     $user = $result->fetch_assoc();
-    $errormsg = $user["firstname"] . " " . $user["lastname"];
+    if (password_verify($password, $user["password"])) {
+        $userid = $user["id"];
+        include __DIR__ . '/../config/session.php';
+    } else {
+        $errormsg = "Incorrect password";
+    }
 } else {
     $errormsg = "There is no account whit this Email";
 }

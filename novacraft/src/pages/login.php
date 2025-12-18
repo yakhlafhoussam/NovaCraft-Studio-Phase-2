@@ -1,6 +1,13 @@
 <?php
+session_start();
 $errormsg = '';
-$toast = '';
+if (isset($_SESSION["id"])) {
+    $toast = "Welcome back" . " " . $_SESSION["id"];
+} else {
+    session_destroy();
+    $toast = '';
+}
+
 $email = '';
 $password = '';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
             ?></h1>
     </div>
-    <div class="w-1/2 p-4 border-4 border-solide border-black rounded-3xl flex flex-col justify-center items-center gap-10">
+    <div class="w-1/2 px-4 py-8 border-4 border-solide border-black rounded-3xl flex flex-col justify-center items-center gap-10">
         <h1 class="font-inter font-bold text-5xl text-black">Register</h1>
     <form method="POST" class="w-11/12 flex flex-col justify-center items-center gap-8">
         <div class="w-11/12 h-16 flex justify-center">
