@@ -11,7 +11,7 @@
     <?php
     session_start();
     if (isset($_SESSION["id"])) {
-        echo "<a href='profil' class='bg-white py-3 w-32 text-center rounded-full font-inter font-bold text-xl text-black hover:bg-gray-200 mr-20'>My profile</a>";
+        echo "<a href='profile' class='bg-white py-3 w-32 text-center rounded-full font-inter font-bold text-xl text-black hover:bg-gray-200 mr-20'>My profile</a>";
     } else {
         session_destroy();
         echo '<div class="h-full flex justify-around items-center gap-2">
