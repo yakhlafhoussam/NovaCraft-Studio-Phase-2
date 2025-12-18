@@ -7,7 +7,7 @@
         <a id="contact" class="font-inter font-bold text-xl text-white hover:scale-105" href="contact">Contact</a>
     </div>
     <div class="h-full flex justify-around items-center gap-2">
-        <a href="login" class="py-3 w-32 text-center rounded-full font-inter font-bold text-xl border border-solid border-white text-white hover:bg-gray-800">Log in</a>
-        <a href="register" class="bg-white py-3 w-32 text-center rounded-full font-inter font-bold text-xl text-black hover:bg-gray-200">Register</a>
+        <a href="login" class="bg-white py-3 w-32 text-center rounded-full font-inter font-bold text-xl text-black hover:bg-gray-200">Log in</a>
+        <a href="register" class="py-3 w-32 text-center rounded-full font-inter font-bold text-xl border border-solid border-white text-white hover:bg-gray-800">Sign UP</a>
     </div>
 </header>

@@ -50,23 +50,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
             ?></h1>
     </div>
-    <h1 class="font-inter font-bold text-5xl text-black">Register</h1>
+    <div class="w-1/2 p-4 border-4 border-solide border-black rounded-3xl flex flex-col justify-center items-center gap-10">
+        <h1 class="font-inter font-bold text-5xl text-black">Register</h1>
     <form method="POST" class="w-11/12 flex flex-col justify-center items-center gap-8">
         <div class="w-11/12 h-16 flex justify-center">
-            <input class="trunoff rounded-full w-1/2 h-full px-8 border border-solid" type="text" name="first" value='<?php echo $first; ?>' placeholder="Firstname...">
+            <input class="trunoff rounded-full w-full h-full px-8 border border-solid" type="text" name="first" value='<?php echo $first; ?>' placeholder="Firstname...">
         </div>
         <div class="w-11/12 h-16 flex justify-center">
-            <input class="trunoff rounded-full w-1/2 h-full px-8 border border-solid" type="text" name="last" value='<?php echo $last; ?>' placeholder="Lastname...">
+            <input class="trunoff rounded-full w-full h-full px-8 border border-solid" type="text" name="last" value='<?php echo $last; ?>' placeholder="Lastname...">
         </div>
         <div class="w-11/12 h-16 flex justify-center">
-            <input class="trunoff rounded-full w-1/2 h-full px-8 border border-solid" type="text" name="user" value='<?php echo $user; ?>' placeholder="Username...">
+            <input class="trunoff rounded-full w-full h-full px-8 border border-solid" type="text" name="user" value='<?php echo $user; ?>' placeholder="Username...">
         </div>
         <div class="w-11/12 h-16 flex justify-center">
-            <input class="trunoff rounded-full w-1/2 h-full px-8 border border-solid" type="text" name="email" value='<?php echo $email; ?>' placeholder="Your Email...">
+            <input class="trunoff rounded-full w-full h-full px-8 border border-solid" type="text" name="email" value='<?php echo $email; ?>' placeholder="Your Email...">
         </div>
         <div class="w-11/12 h-16 flex justify-center">
-            <input class="trunoff rounded-full w-1/2 h-full px-8 border border-solid" type="password" name="password" value='<?php echo $password; ?>' placeholder="Password...">
+            <input class="trunoff rounded-full w-full h-full px-8 border border-solid" type="password" name="password" value='<?php echo $password; ?>' placeholder="Password...">
         </div>
         <button id="send" type="submit" class="bg-black px-20 py-5 rounded-full font-inter font-bold text-xl text-white hover:bg-gray-800">Register</button>
     </form>
+    </div>
 </div>

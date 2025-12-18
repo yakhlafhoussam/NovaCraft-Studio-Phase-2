@@ -1,20 +1,58 @@
+<?php
+$errormsg = '';
+$toast = '';
+$email = '';
+$password = '';
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    if (empty($email) || empty($password)) {
+        $toast = 'Please fill in all fields';
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $toast = 'Invalid email';
+    } else {
+        include __DIR__ . '/../logics/loginlogic.php';
+        if (!$errormsg) {
+            $done = 'done';
+            $errormsg = '';
+        }
+    }
+}
+?>
+
+<div id="check" data-name="<?php
+                            if ($toast || $errormsg) {
+                                echo 'error';
+                            } elseif ($done) {
+                                echo 'done';
+                            }
+                            ?>"></div>
 <div class="w-screen h-full bg-[#EFF0F0] flex flex-col justify-center items-center gap-10 relative">
-    <div id="toast" class="flex gap-2 bg-green-600 text-white px-4 py-3 rounded-lg absolute top-10 -left-80">
-        <span class="font-semibold">Success:</span><h1>Your message has been sent!</h1>
-    </div>
+    <a id="toprofil" href="" class="w-0 h-0"></a>
     <div id="toast0" class="flex gap-2 bg-red-600 text-white px-4 py-3 rounded-lg absolute top-10 -left-80">
-        <span class="font-semibold">Error:</span><h1>Please fill all fields!</h1>
+        <span class="font-semibold">Error:</span>
+        <h1><?php
+            if ($toast) {
+                echo $toast;
+            } elseif ($errormsg) {
+                echo $errormsg;
+            }
+            ?></h1>
     </div>
-    <h1 class="font-inter font-bold text-5xl text-black">Log in</h1>
-    <form class="w-11/12 flex flex-col justify-center items-center gap-8">
+    <div class="w-1/2 px-4 py-8 border-4 border-solide border-black rounded-3xl flex flex-col justify-center items-center gap-10">
+        <h1 class="font-inter font-bold text-5xl text-black">Log in</h1>
+    <form method="POST" class="w-11/12 flex flex-col justify-center items-center gap-8">
         <div class="w-11/12 h-16 flex justify-center">
-            <input class="rounded-full w-1/2 h-full px-8 border border-solid" type="text" name="name" id="name"
-                placeholder="Username...">
+            <input class="trunoff rounded-full w-full h-full px-8 border border-solid" type="text" name="email" value='<?php echo $email; ?>' placeholder="Email...">
         </div>
         <div class="w-11/12 h-16 flex justify-center">
-            <input class="rounded-full w-1/2 h-full px-8 border border-solid" type="password" name="email" id="email"
-                placeholder="Password...">
+            <input class="trunoff rounded-full w-full h-full px-8 border border-solid" type="password" name="password" value='<?php echo $password; ?>' placeholder="Password...">
+        </div>
+        <div class="flex gap-2">
+            <button id="send" type="submit" class="bg-black w-32 py-5 rounded-full font-inter font-bold text-xl text-white hover:bg-gray-800">Log in</button>
+            <a href="register" class="py-5 w-32 text-center rounded-full font-inter font-bold text-xl border border-solid border-black text-black hover:bg-gray-200">Sign UP</a>
         </div>
     </form>
-    <button id="send" class="bg-black px-20 py-5 rounded-full font-inter font-bold text-xl text-white hover:bg-gray-800">Log in</button>
+    </div>
 </div>
