@@ -3,6 +3,14 @@
     <div class="flex flex-wrap w-full h-full gap-5 px-5 overflow-y-auto py-5 no-scrollbar">
         <?php
 
+        if (isset($_SESSION["role"])) {
+            if ($_SESSION["role"] != 'admin') {
+                header('location: 404');
+            }
+        } else {
+            header('location: 404');
+        }
+
         include __DIR__ . '/../logics/contactinfologic.php';
 
         for ($x = 0; $x < count($messageArr); $x++) {

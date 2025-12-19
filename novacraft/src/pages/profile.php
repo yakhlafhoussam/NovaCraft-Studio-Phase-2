@@ -1,5 +1,9 @@
 <?php
 
+if (!isset($_SESSION["id"])) {
+    header('location: 404');
+}
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     include __DIR__ . '/../logics/logoutlogic.php';
 } else {

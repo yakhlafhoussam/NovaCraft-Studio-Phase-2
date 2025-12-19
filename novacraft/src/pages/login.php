@@ -1,4 +1,9 @@
 <?php
+
+if (isset($_SESSION["id"])) {
+    header('location: 404');
+}
+
 $errormsg = '';
 $toast = '';
 $email = '';
@@ -42,17 +47,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
     <div class="w-1/2 px-4 py-8 border-4 border-solide border-black rounded-3xl flex flex-col justify-center items-center gap-10">
         <h1 class="font-inter font-bold text-5xl text-black">Log in</h1>
-    <form method="POST" class="w-11/12 flex flex-col justify-center items-center gap-8">
-        <div class="w-11/12 h-16 flex justify-center">
-            <input class="trunoff rounded-full w-full h-full px-8 border border-solid" type="text" name="email" value='<?php echo $email; ?>' placeholder="Email...">
-        </div>
-        <div class="w-11/12 h-16 flex justify-center">
-            <input class="trunoff rounded-full w-full h-full px-8 border border-solid" type="password" name="password" value='<?php echo $password; ?>' placeholder="Password...">
-        </div>
-        <div class="flex gap-2">
-            <button id="send" type="submit" class="bg-black w-32 h-16 rounded-full font-inter font-bold text-xl text-white hover:bg-gray-800">Log in</button>
-            <a href="register" class="h-16 w-32 text-center rounded-full font-inter font-bold text-xl flex items-center justify-center border border-solid border-black text-black hover:bg-gray-200">Sign UP</a>
-        </div>
-    </form>
+        <form method="POST" class="w-11/12 flex flex-col justify-center items-center gap-8">
+            <div class="w-11/12 h-16 flex justify-center">
+                <input class="trunoff rounded-full w-full h-full px-8 border border-solid" type="text" name="email" value='<?php echo $email; ?>' placeholder="Email...">
+            </div>
+            <div class="w-11/12 h-16 flex justify-center">
+                <input class="trunoff rounded-full w-full h-full px-8 border border-solid" type="password" name="password" value='<?php echo $password; ?>' placeholder="Password...">
+            </div>
+            <div class="flex gap-2">
+                <button id="send" type="submit" class="bg-black w-32 h-16 rounded-full font-inter font-bold text-xl text-white hover:bg-gray-800">Log in</button>
+                <a href="register" class="h-16 w-32 text-center rounded-full font-inter font-bold text-xl flex items-center justify-center border border-solid border-black text-black hover:bg-gray-200">Sign UP</a>
+            </div>
+        </form>
     </div>
 </div>
