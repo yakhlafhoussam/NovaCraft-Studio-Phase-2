@@ -15,6 +15,7 @@ if ($sql->num_rows > 0) {
     $user = $result->fetch_assoc();
     if (password_verify($password, $user["password"])) {
         $userid = $user["id"];
+        $role = $user["role"];
         include __DIR__ . '/../config/session.php';
     } else {
         $errormsg = "Incorrect password";

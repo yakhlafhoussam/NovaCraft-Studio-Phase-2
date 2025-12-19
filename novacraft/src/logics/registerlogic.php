@@ -20,8 +20,8 @@ if ($sql->num_rows > 0) {
     } else {
         $errormsg = '';
         $hashed = password_hash($password, PASSWORD_DEFAULT);
-        $sql = $conn->prepare("insert into users (firstname, lastname, username, email, password) values (?, ?, ?, ?, ?)");
-        $sql->bind_param("sssss", $first, $last, $user, $email, $hashed);
+        $sql = $conn->prepare("insert into users (firstname, lastname, username, email, password, role) values (?, ?, ?, ?, ?, ?)");
+        $sql->bind_param("ssssss", $first, $last, $user, $email, $hashed, 'user');
         $sql->execute();
     }
 }

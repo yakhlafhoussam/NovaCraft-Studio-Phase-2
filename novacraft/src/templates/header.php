@@ -6,7 +6,7 @@
         <a id="home" class="font-inter font-bold text-xl text-white hover:scale-105" href="/">Home</a>
         <a id="services" class="font-inter font-bold text-xl text-white hover:scale-105" href="services">Services</a>
         <a id="about" class="font-inter font-bold text-xl text-white hover:scale-105" href="about">About</a>
-        <a id="contact" class="font-inter font-bold text-xl text-white hover:scale-105" href="contact">Contact</a>
+        <a id="contact" class="font-inter font-bold text-xl text-white hover:scale-105" href="<?php if (isset($_SESSION["role"])) { if ($_SESSION["role"] == 'admin') { echo "contactinfo"; } else { echo 'contact'; } } else { echo "contact"; } ?>">Contact</a>
     </div>
     <?php
     if (isset($_SESSION["id"])) {

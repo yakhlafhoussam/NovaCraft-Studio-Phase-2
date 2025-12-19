@@ -50,8 +50,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input class="trunoff rounded-full w-full h-full px-8 border border-solid" type="password" name="password" value='<?php echo $password; ?>' placeholder="Password...">
         </div>
         <div class="flex gap-2">
-            <button id="send" type="submit" class="bg-black w-32 py-5 rounded-full font-inter font-bold text-xl text-white hover:bg-gray-800">Log in</button>
-            <a href="register" class="py-5 w-32 text-center rounded-full font-inter font-bold text-xl border border-solid border-black text-black hover:bg-gray-200">Sign UP</a>
+            <button id="send" type="submit" class="bg-black w-32 h-16 rounded-full font-inter font-bold text-xl text-white hover:bg-gray-800">Log in</button>
+            <a href="register" class="h-16 w-32 text-center rounded-full font-inter font-bold text-xl flex items-center justify-center border border-solid border-black text-black hover:bg-gray-200">Sign UP</a>
         </div>
     </form>
     </div>
