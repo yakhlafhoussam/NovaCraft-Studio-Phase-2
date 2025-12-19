@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 $page = $_SERVER['REQUEST_URI'];
 if ($page == "/") {
     $srcpage = '../src/pages/home.php';
