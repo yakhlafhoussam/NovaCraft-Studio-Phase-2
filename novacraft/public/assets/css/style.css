@@ -574,6 +574,16 @@ video {
   top: 2.5rem;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -602,6 +612,10 @@ video {
   height: 10%;
 }
 
+.h-\[35\%\] {
+  height: 35%;
+}
+
 .h-\[80\%\] {
   height: 80%;
 }
@@ -612,6 +626,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.max-h-\[35\%\] {
+  max-height: 35%;
 }
 
 .min-h-full {
@@ -648,6 +666,10 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.cursor-auto {
+  cursor: auto;
 }
 
 .cursor-pointer {
@@ -708,6 +730,22 @@ video {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
+.break-all {
+  word-break: break-all;
 }
 
 .rounded-2xl {
@@ -941,6 +979,17 @@ video {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+/* Hide scrollbar */
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .hover\:scale-105:hover {

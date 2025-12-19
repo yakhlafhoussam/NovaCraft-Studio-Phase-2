@@ -1,4 +1,9 @@
 <?php
+
+if (isset($_SESSION["id"])) {
+    header('location: 404');
+}
+
 $errormsg = '';
 $toast = '';
 $first = '';
